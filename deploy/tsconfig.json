@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "declaration": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "paths": {
+      "@ecs/shared": ["./lib/shared/src/index.ts"],
+      "@ecs/shared/*": ["./lib/shared/src/*"],
+      "@ecs/core": ["./lib/core/src/index.ts"],
+      "@ecs/core/*": ["./lib/core/src/*"],
+      "@ecs/llm-gateway": ["./lib/llm-gateway/src/index.ts"],
+      "@ecs/llm-gateway/*": ["./lib/llm-gateway/src/*"],
+      "@ecs/base-adapter": ["./lib/adapters/base-adapter/src/index.ts"],
+      "@ecs/base-adapter/*": ["./lib/adapters/base-adapter/src/*"]
+    }
+  },
+  "include": ["src/**/*", "lib/**/*"]
+}
