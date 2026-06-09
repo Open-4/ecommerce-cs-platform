@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: ecs-api
+    env: node
+    rootDir: deploy
+    buildCommand: npm install
+    startCommand: npx tsx src/main.ts
+    plan: free
+    healthCheckPath: /api/v1/auth/login
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: ae165b55a0391bd1d7d004da018da7f5283333b137d0630aa870d142ebd43cad
+      - key: DEEPSEEK_API_KEY
+        value: sk-cc6d64f978164dc593beded983d74020
+      - key: FRONTEND_URL
+        value: https://out-he1kcg8g7-heyiquan-s-projects.vercel.app
+      - key: DB_HOST
+        fromDatabase:
+          name: ecs-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: ecs-db
+          property: port
+      - key: DB_USER
+        fromDatabase:
+          name: ecs-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: ecs-db
+          property: password
+      - key: DB_NAME
+        fromDatabase:
+          name: ecs-db
+          property: database
+      - key: REDIS_URL
+        fromService:
+          name: ecs-redis
+          type: redis
+          property: connectionString
+
+databases:
+  - name: ecs-db
+    plan: free
+    type: postgres
+  - name: ecs-redis
+    type: redis
+    plan: free
