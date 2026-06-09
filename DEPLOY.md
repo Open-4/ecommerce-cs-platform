@@ -35,7 +35,7 @@
 | `DB_PASSWORD` | `${{Postgres.DATABASE_PASSWORD}}` |
 | `DB_NAME` | `${{Postgres.DATABASE_NAME}}` |
 | `REDIS_URL` | `${{Redis.DATABASE_URL}}` |
-| `CLAUDE_API_KEY` | ⚠️ 替换为你的 Claude API Key |
+| `DEEPSEEK_API_KEY` | `sk-cc6d64f978164dc593beded983d74020` |
 | `FRONTEND_URL` | `https://out-he1kcg8g7-heyiquan-s-projects.vercel.app` |
 
 > **重要**：`${{Postgres.xxx}}` 和 `${{Redis.xxx}}` 是 Railway 的引用语法，

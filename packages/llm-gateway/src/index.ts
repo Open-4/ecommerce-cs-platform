@@ -1,6 +1,7 @@
 import type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage } from "./providers/base.js";
 import { ClaudeProvider } from "./providers/claude.js";
 import { OpenAIProvider } from "./providers/openai.js";
+import { DeepSeekProvider } from "./providers/deepseek.js";
 import type { GuardConfig } from "./guard.js";
 import { checkOutput, DEFAULT_GUARD_CONFIG, wrapWithReviewNeeded } from "./guard.js";
 import { CostTracker } from "./cost.js";
@@ -13,7 +14,9 @@ import type { PromptTemplate } from "./prompts/index.js";
 /** 网关配置 */
 export interface LLMGatewayConfig {
   /** 主提供商 */
-  primaryProvider: "claude" | "openai";
+  primaryProvider: "claude" | "openai" | "deepseek";
+  /** DeepSeek API Key */
+  deepseekApiKey?: string;
   /** Claude API Key */
   claudeApiKey?: string;
   /** OpenAI API Key */
@@ -55,6 +58,12 @@ export class LLMGateway {
     this.costTracker = new CostTracker();
 
     // 初始化提供商
+    if (config.deepseekApiKey) {
+      this.providers.set(
+        "deepseek",
+        new DeepSeekProvider({ apiKey: config.deepseekApiKey }),
+      );
+    }
     if (config.claudeApiKey) {
       this.providers.set(
         "claude",
@@ -77,10 +86,10 @@ export class LLMGateway {
     this.primary = primary;
 
     this.modelOverrides = {
-      intent: config.defaultModels?.intent ?? "claude-haiku-4-5",
-      reply: config.defaultModels?.reply ?? "claude-sonnet-4-6",
-      decision: config.defaultModels?.decision ?? "claude-sonnet-4-6",
-      summary: config.defaultModels?.summary ?? "claude-haiku-4-5",
+      intent: config.defaultModels?.intent ?? "deepseek-chat",
+      reply: config.defaultModels?.reply ?? "deepseek-chat",
+      decision: config.defaultModels?.decision ?? "deepseek-chat",
+      summary: config.defaultModels?.summary ?? "deepseek-chat",
     };
   }
 

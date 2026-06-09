@@ -6,9 +6,14 @@ import type { LLMUsage } from "./providers/base.js";
 
 /** 各模型定价（USD per 1M tokens） */
 const MODEL_PRICING: Record<string, { input: number; output: number }> = {
+  // DeepSeek (USD per 1M tokens)
+  "deepseek-chat": { input: 0.14, output: 0.28 },
+  "deepseek-reasoner": { input: 0.55, output: 2.19 },
+  // Claude
   "claude-haiku-4-5": { input: 0.80, output: 4.00 },
   "claude-sonnet-4-6": { input: 3.00, output: 15.00 },
   "claude-opus-4-8": { input: 15.00, output: 75.00 },
+  // OpenAI
   "gpt-4o": { input: 2.50, output: 10.00 },
   "gpt-4o-mini": { input: 0.15, output: 0.60 },
 };

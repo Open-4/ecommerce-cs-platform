@@ -27,13 +27,15 @@ export class AiService {
     @Inject("DB") private readonly db: DbClient,
     private readonly conversationGateway: ConversationGateway,
   ) {
-    // 初始化 LLM Gateway（如果配置了 API Key）
+    // 初始化 LLM Gateway
+    const deepseekKey = process.env.DEEPSEEK_API_KEY;
     const claudeKey = process.env.CLAUDE_API_KEY;
     const openaiKey = process.env.OPENAI_API_KEY;
 
-    if (claudeKey || openaiKey) {
+    if (deepseekKey || claudeKey || openaiKey) {
       this.llmGateway = new LLMGateway({
-        primaryProvider: claudeKey ? "claude" : "openai",
+        primaryProvider: deepseekKey ? "deepseek" : claudeKey ? "claude" : "openai",
+        deepseekApiKey: deepseekKey,
         claudeApiKey: claudeKey,
         openaiApiKey: openaiKey,
       });
