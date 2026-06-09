@@ -1,0 +1,6 @@
+{
+  "outputDirectory": "out",
+  "buildCommand": "npx next build",
+  "installCommand": "pnpm install",
+  "framework": null
+}

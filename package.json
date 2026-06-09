@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-cs-platform",
+  "private": true,
+  "version": "0.0.1",
+  "description": "多平台电商智能客服中台",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "db:generate": "turbo db:generate",
+    "db:migrate": "turbo db:migrate",
+    "db:push": "cd packages/api && pnpm drizzle-kit push",
+    "clean": "turbo clean && rm -rf node_modules"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "devDependencies": {
+    "tsx": "^4.22.4"
+  }
+}
