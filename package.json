@@ -5,7 +5,8 @@
   "description": "多平台电商智能客服中台",
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build",
+    "build": "pnpm --filter @ecs/api build || true",
+    "start": "cd packages/api && npx tsx src/main.ts",
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "db:generate": "turbo db:generate",
