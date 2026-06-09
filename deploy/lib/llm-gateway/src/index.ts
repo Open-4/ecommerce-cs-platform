@@ -1,11 +1,11 @@
-import type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage } from "./providers/base.js";
-import { ClaudeProvider } from "./providers/claude.js";
-import { OpenAIProvider } from "./providers/openai.js";
-import { DeepSeekProvider } from "./providers/deepseek.js";
-import type { GuardConfig } from "./guard.js";
-import { checkOutput, DEFAULT_GUARD_CONFIG, wrapWithReviewNeeded } from "./guard.js";
-import { CostTracker } from "./cost.js";
-import type { PromptTemplate } from "./prompts/index.js";
+import type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage } from "./providers/base";
+import { ClaudeProvider } from "./providers/claude";
+import { OpenAIProvider } from "./providers/openai";
+import { DeepSeekProvider } from "./providers/deepseek";
+import type { GuardConfig } from "./guard";
+import { checkOutput, DEFAULT_GUARD_CONFIG, wrapWithReviewNeeded } from "./guard";
+import { CostTracker } from "./cost";
+import type { PromptTemplate } from "./prompts/index";
 
 // ============================================================
 // LLM 网关 - 统一入口
@@ -279,10 +279,10 @@ export class LLMGateway {
 }
 
 // 重新导出类型
-export type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage, LLMUsage } from "./providers/base.js";
-export type { GuardConfig, GuardResult } from "./guard.js";
-export { checkOutput, DEFAULT_GUARD_CONFIG, wrapWithReviewNeeded } from "./guard.js";
-export type { PromptTemplate } from "./prompts/index.js";
-export * from "./prompts/index.js";
-export { CostTracker } from "./cost.js";
-export type { CostRecord } from "./cost.js";
+export type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage, LLMUsage } from "./providers/base";
+export type { GuardConfig, GuardResult } from "./guard";
+export { checkOutput, DEFAULT_GUARD_CONFIG, wrapWithReviewNeeded } from "./guard";
+export type { PromptTemplate } from "./prompts/index";
+export * from "./prompts/index";
+export { CostTracker } from "./cost";
+export type { CostRecord } from "./cost";

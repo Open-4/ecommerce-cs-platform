@@ -9,8 +9,8 @@ import {
   Body,
   UseGuards,
 } from "@nestjs/common";
-import { KnowledgeService } from "./knowledge.service.js";
-import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard.js";
+import { KnowledgeService } from "./knowledge.service";
+import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard";
 
 @Controller("knowledge")
 @UseGuards(JwtAuthGuard)

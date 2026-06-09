@@ -1,7 +1,7 @@
 import { Controller, Post, Body, HttpCode, HttpStatus } from "@nestjs/common";
-import { ConversationService } from "../conversation/conversation.service.js";
-import { ConversationGateway } from "../conversation/conversation.gateway.js";
-import { AiService } from "../ai/ai.service.js";
+import { ConversationService } from "../conversation/conversation.service";
+import { ConversationGateway } from "../conversation/conversation.gateway";
+import { AiService } from "../ai/ai.service";
 
 @Controller("webhook")
 export class WebhookController {

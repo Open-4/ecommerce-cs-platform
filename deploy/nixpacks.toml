@@ -1,0 +1,11 @@
+[variables]
+NIXPACKS_DISABLE_TYPESCRIPT=1
+
+[phases.setup]
+nixPkgs = ["nodejs", "npm"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[start]
+cmd = "npx tsx src/main.ts"

@@ -1,7 +1,7 @@
 import { Injectable, Inject } from "@nestjs/common";
 import { eq, sql, cosineDistance, desc } from "drizzle-orm";
-import type { DbClient } from "../../database/connection.js";
-import { schema } from "../../database/schema/index.js";
+import type { DbClient } from "../../database/connection";
+import { schema } from "../../database/schema/index";
 import { LLMGateway } from "@ecs/llm-gateway";
 import {
   REPLY_GENERATE_PROMPT,
@@ -13,7 +13,7 @@ import {
   assessRefundRisk,
   type RiskAssessmentInput,
 } from "@ecs/core";
-import { ConversationGateway } from "../conversation/conversation.gateway.js";
+import { ConversationGateway } from "../conversation/conversation.gateway";
 
 // ============================================================
 // AI 处理服务 - 核心 pipeline

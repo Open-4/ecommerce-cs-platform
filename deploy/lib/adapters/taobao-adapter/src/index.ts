@@ -1,1 +1,1 @@
-export { TaobaoAdapter } from "./taobao.adapter.js";
+export { TaobaoAdapter } from "./taobao.adapter";

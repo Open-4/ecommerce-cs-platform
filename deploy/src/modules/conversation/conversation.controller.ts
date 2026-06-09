@@ -8,8 +8,8 @@ import {
   UseGuards,
   Request,
 } from "@nestjs/common";
-import { ConversationService } from "./conversation.service.js";
-import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard.js";
+import { ConversationService } from "./conversation.service";
+import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard";
 
 @Controller("conversations")
 @UseGuards(JwtAuthGuard)

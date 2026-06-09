@@ -2,7 +2,7 @@
 // 商品类型
 // ============================================================
 
-import type { PlatformType } from "./platform.js";
+import type { PlatformType } from "./platform";
 
 /** 商品状态 */
 export type ProductStatus = "on_sale" | "off_shelf" | "deleted";

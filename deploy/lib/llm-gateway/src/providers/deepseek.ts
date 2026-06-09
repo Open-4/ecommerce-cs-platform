@@ -3,7 +3,7 @@ import type {
   LLMRequest,
   LLMResponse,
   LLMProviderConfig,
-} from "./base.js";
+} from "./base";
 
 // ============================================================
 // DeepSeek Provider (OpenAI 兼容)

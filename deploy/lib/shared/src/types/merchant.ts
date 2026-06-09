@@ -2,7 +2,7 @@
 // 商家 & 店铺类型
 // ============================================================
 
-import type { PlatformType } from "./platform.js";
+import type { PlatformType } from "./platform";
 
 /** 商家 */
 export interface Merchant {

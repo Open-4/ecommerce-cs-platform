@@ -2,7 +2,7 @@
 // 订单与退款类型
 // ============================================================
 
-import type { PlatformType } from "./platform.js";
+import type { PlatformType } from "./platform";
 
 /** 订单状态（统一抽象） */
 export type UnifiedOrderStatus =

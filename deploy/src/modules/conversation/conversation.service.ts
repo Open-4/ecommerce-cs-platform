@@ -1,7 +1,7 @@
 import { Injectable, Inject } from "@nestjs/common";
 import { eq, desc, and, count, sql } from "drizzle-orm";
-import type { DbClient } from "../../database/connection.js";
-import { schema } from "../../database/schema/index.js";
+import type { DbClient } from "../../database/connection";
+import { schema } from "../../database/schema/index";
 import type { ConversationStatus } from "@ecs/shared";
 import { transition } from "@ecs/core";
 

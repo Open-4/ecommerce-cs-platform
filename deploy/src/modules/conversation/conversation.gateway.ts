@@ -8,7 +8,7 @@ import {
   MessageBody,
 } from "@nestjs/websockets";
 import { Server, Socket } from "socket.io";
-import { ConversationService } from "./conversation.service.js";
+import { ConversationService } from "./conversation.service";
 
 @WebSocketGateway({
   cors: {

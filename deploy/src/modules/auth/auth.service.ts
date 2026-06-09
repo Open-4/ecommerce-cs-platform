@@ -1,8 +1,8 @@
 import { Injectable, Inject, UnauthorizedException } from "@nestjs/common";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import type { DbClient } from "../../database/connection.js";
-import { schema } from "../../database/schema/index.js";
+import type { DbClient } from "../../database/connection";
+import { schema } from "../../database/schema/index";
 import { eq, sql } from "drizzle-orm";
 
 const TRIAL_DAYS = 14;

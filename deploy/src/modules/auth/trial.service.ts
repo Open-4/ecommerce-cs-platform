@@ -1,7 +1,7 @@
 import { Injectable, Inject } from "@nestjs/common";
 import { eq, sql } from "drizzle-orm";
-import type { DbClient } from "../../database/connection.js";
-import { schema } from "../../database/schema/index.js";
+import type { DbClient } from "../../database/connection";
+import { schema } from "../../database/schema/index";
 
 // ============================================================
 // 试用系统服务

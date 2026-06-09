@@ -1,4 +1,4 @@
-import type { LLMUsage } from "./providers/base.js";
+import type { LLMUsage } from "./providers/base";
 
 // ============================================================
 // Token 用量 & 成本追踪

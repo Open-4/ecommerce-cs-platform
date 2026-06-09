@@ -4,7 +4,7 @@ import type {
   LLMResponse,
   LLMMessage,
   LLMProviderConfig,
-} from "./base.js";
+} from "./base";
 
 // ============================================================
 // Claude (Anthropic) Provider

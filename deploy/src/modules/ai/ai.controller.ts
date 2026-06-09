@@ -6,8 +6,8 @@ import {
   HttpCode,
   HttpStatus,
 } from "@nestjs/common";
-import { AiService } from "./ai.service.js";
-import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard.js";
+import { AiService } from "./ai.service";
+import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard";
 
 @Controller("ai")
 @UseGuards(JwtAuthGuard)

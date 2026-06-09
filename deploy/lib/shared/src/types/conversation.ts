@@ -2,7 +2,7 @@
 // 会话与消息类型
 // ============================================================
 
-import type { PlatformType } from "./platform.js";
+import type { PlatformType } from "./platform";
 
 /** 会话状态 */
 export type ConversationStatus =
