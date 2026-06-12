@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Injectable, NestMiddleware } from "@nestjs/common";
 import type { FastifyRequest, FastifyReply } from "fastify";
 

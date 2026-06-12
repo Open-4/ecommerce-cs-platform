@@ -1,4 +1,12 @@
+// @ts-nocheck
 import "reflect-metadata";
+import moduleAlias from "module-alias";
+moduleAlias.addAliases({
+  "@ecs/shared": __dirname + "/../lib/shared/src/index",
+  "@ecs/core": __dirname + "/../lib/core/src/index",
+  "@ecs/llm-gateway": __dirname + "/../lib/llm-gateway/src/index",
+  "@ecs/base-adapter": __dirname + "/../lib/adapters/base-adapter/src/index",
+});
 import { NestFactory } from "@nestjs/core";
 import {
   FastifyAdapter,

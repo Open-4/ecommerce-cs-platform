@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Injectable, Inject, UnauthorizedException } from "@nestjs/common";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";

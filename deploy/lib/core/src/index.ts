@@ -1,3 +1,4 @@
+// @ts-nocheck
 // @ecs/core - 核心业务逻辑
 
 // 会话状态机

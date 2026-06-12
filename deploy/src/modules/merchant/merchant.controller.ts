@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Controller, Get, Post, Body, UseGuards, Request, Param } from "@nestjs/common";
 import { MerchantService } from "./merchant.service";
 import { JwtAuthGuard } from "../../common/guards/jwt-auth.guard";

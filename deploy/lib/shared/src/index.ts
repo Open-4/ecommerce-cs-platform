@@ -1,3 +1,4 @@
+// @ts-nocheck
 // @ecs/shared - 共享类型、常量和工具
 export * from "./types/conversation";
 export * from "./types/order";

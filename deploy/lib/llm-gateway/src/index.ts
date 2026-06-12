@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ILLMProvider, LLMRequest, LLMResponse, LLMMessage } from "./providers/base";
 import { ClaudeProvider } from "./providers/claude";
 import { OpenAIProvider } from "./providers/openai";

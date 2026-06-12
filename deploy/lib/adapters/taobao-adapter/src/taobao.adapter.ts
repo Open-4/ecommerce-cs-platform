@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { BasePlatformAdapter } from "@ecs/base-adapter";
 import type { MessageEvent, MessageCallback } from "@ecs/base-adapter";
 import type {

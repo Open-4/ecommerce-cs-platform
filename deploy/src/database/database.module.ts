@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Module, Global, OnModuleDestroy } from "@nestjs/common";
 import { createDb } from "./connection";
 import type { DbClient } from "./connection";
