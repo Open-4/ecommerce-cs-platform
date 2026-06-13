@@ -7,6 +7,7 @@
   "deploy": {
     "startCommand": "cd deploy && npm start",
     "healthcheckPath": "/api/v1/auth/login",
-    "restartPolicyType": "ON_FAILURE"
+    "restartPolicyType": "ON_FAILURE",
+    "numReplicas": 1
   }
 }
