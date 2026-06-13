@@ -3,7 +3,7 @@
 // 本地开发用 localhost，线上用阿里云服务器
 const BASE_URL = typeof window !== "undefined" && window.location.hostname === "localhost"
   ? "http://localhost:4000/api/v1"
-  : "http://39.96.12.12/api/v1";
+  : "http://39-96-12-12.sslip.io/api/v1";
 
 interface RequestOptions {
   method?: string;
