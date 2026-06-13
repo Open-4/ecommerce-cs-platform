@@ -1,0 +1,17 @@
+[Unit]
+Description=ECS API Server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/ecs/deploy
+Environment="PORT=80"
+Environment="DATABASE_URL=postgresql://postgres:zvIVYDbUiYFmOOQkYRhbEeNZENWVYrvy@acela.proxy.rlwy.net:50296/railway"
+Environment="DEEPSEEK_API_KEY=sk-cc6d64f978164dc593beded983d74020"
+Environment="JWT_SECRET=ae165b55a0391bd1d7d004da018da7f5283333b137d0630aa870d142ebd43cad"
+Environment="NODE_ENV=production"
+ExecStart=/usr/bin/node dist/src/main.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
