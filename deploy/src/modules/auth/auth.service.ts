@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Injectable, Inject, UnauthorizedException } from "@nestjs/common";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import * as jwt from "jsonwebtoken";
+import * as bcrypt from "bcryptjs";
 import type { DbClient } from "../../database/connection";
 import { schema } from "../../database/schema/index";
 import { eq, sql } from "drizzle-orm";

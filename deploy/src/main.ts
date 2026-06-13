@@ -8,18 +8,11 @@ moduleAlias.addAliases({
   "@ecs/base-adapter": __dirname + "/../lib/adapters/base-adapter/src/index",
 });
 import { NestFactory } from "@nestjs/core";
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
-} from "@nestjs/platform-fastify";
 import { ValidationPipe } from "@nestjs/common";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestFastifyApplication>(
-    AppModule,
-    new FastifyAdapter({ logger: true }),
-  );
+  const app = await NestFactory.create(AppModule);
 
   // 全局验证管道
   app.useGlobalPipes(
