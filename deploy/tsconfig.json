@@ -14,14 +14,11 @@
     "baseUrl": ".",
     "paths": {
       "@ecs/shared": ["./lib/shared/src/index"],
-      "@ecs/shared/*": ["./lib/shared/src/*"],
       "@ecs/core": ["./lib/core/src/index"],
-      "@ecs/core/*": ["./lib/core/src/*"],
       "@ecs/llm-gateway": ["./lib/llm-gateway/src/index"],
-      "@ecs/llm-gateway/*": ["./lib/llm-gateway/src/*"],
-      "@ecs/base-adapter": ["./lib/adapters/base-adapter/src/index"],
-      "@ecs/base-adapter/*": ["./lib/adapters/base-adapter/src/*"]
+      "@ecs/base-adapter": ["./lib/adapters/base-adapter/src/index"]
     }
   },
-  "include": ["src/**/*", "lib/**/*"]
+  "include": ["src/**/*", "lib/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
