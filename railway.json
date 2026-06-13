@@ -5,6 +5,7 @@
     "dockerfilePath": "deploy/Dockerfile"
   },
   "deploy": {
+    "startCommand": "node dist/src/main.js",
     "healthcheckPath": "/api/v1/auth/login",
     "restartPolicyType": "ON_FAILURE"
   }
