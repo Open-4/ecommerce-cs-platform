@@ -10,6 +10,7 @@ import { OrderModule } from "./modules/order/order.module";
 import { AnalyticsModule } from "./modules/analytics/analytics.module";
 import { WebhookModule } from "./modules/webhook/webhook.module";
 import { AiModule } from "./modules/ai/ai.module";
+import { HealthController } from "./modules/health/health.controller";
 
 @Module({
   imports: [
@@ -24,5 +25,6 @@ import { AiModule } from "./modules/ai/ai.module";
     WebhookModule,
     AiModule,
   ],
+  controllers: [HealthController],
 })
 export class AppModule {}
