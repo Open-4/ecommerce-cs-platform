@@ -1,6 +1,9 @@
 /** API 客户端 - 与后端 NestJS 通信 */
 
-const BASE_URL = "/api/v1";
+// 本地开发用 localhost，线上部署用隧道
+const BASE_URL = typeof window !== "undefined" && window.location.hostname === "localhost"
+  ? "http://localhost:4000/api/v1"
+  : "https://ecs-api-server.loca.lt/api/v1";
 
 interface RequestOptions {
   method?: string;
