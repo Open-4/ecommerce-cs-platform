@@ -1,9 +1,9 @@
 /** API 客户端 - 与后端 NestJS 通信 */
 
-// 本地开发用 localhost，线上用阿里云服务器
+// 前后端同源部署，使用相对路径
 const BASE_URL = typeof window !== "undefined" && window.location.hostname === "localhost"
   ? "http://localhost:4000/api/v1"
-  : "http://39-96-12-12.sslip.io/api/v1";
+  : "/api/v1";
 
 interface RequestOptions {
   method?: string;
